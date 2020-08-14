@@ -12,7 +12,7 @@ public class Project {
     @GeneratedValue
     @Column(name = "ID")
     private Long id;
-    @Column(name = "name")
+    @Column(name = "NAME")
     private String name;
     @Column(name = "DESCRIPTION")
     private String description;

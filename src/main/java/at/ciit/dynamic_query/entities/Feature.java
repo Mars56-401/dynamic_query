@@ -1,6 +1,5 @@
 package at.ciit.dynamic_query.entities;
 
-import at.ciit.dynamic_query.constants.State;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -14,8 +13,7 @@ public class Feature {
     @Column(name = "ID")
     private Long id;
     @Column(name = "STATE")
-    @Enumerated(EnumType.STRING)
-    private State state;
+    private String state;
     @Column(name = "DESCRIPTION")
     private String description;
     @ManyToOne

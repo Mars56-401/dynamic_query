@@ -1,0 +1,24 @@
+
+###
+###GET ALL TASK
+POST http://localhost:8080/rest/search
+Content-Type: application/json
+
+{
+  "resultType": "TASK"
+}
+
+###GET ALL TASKS in state 'progress'
+POST http://localhost:8080/rest/search
+Content-Type: application/json
+
+{
+  "resultType": "TASK",
+  "filters": [
+    {
+      "fieldName": "state",
+      "operation": "LIKE",
+      "filterValue": "PROGRESS"
+    }
+  ]
+}

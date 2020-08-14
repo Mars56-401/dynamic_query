@@ -1,9 +1,0 @@
-###GET ALL USERS
-POST http://localhost:8080/rest/search
-Content-Type: application/json
-
-{
-  "resultType": "USER"
-}
-
-###

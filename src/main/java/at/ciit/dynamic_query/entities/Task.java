@@ -1,6 +1,5 @@
 package at.ciit.dynamic_query.entities;
 
-import at.ciit.dynamic_query.constants.State;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -14,9 +13,8 @@ public class Task {
     @Column(name = "ID")
     private Long id;
     @Column(name = "STATE")
-    @Enumerated(EnumType.STRING)
-    private State state;
-    @Column(name = "title")
+    private String state;
+    @Column(name = "TITLE")
     private String title;
     @Column(name = "DESCRIPTION")
     private String description;

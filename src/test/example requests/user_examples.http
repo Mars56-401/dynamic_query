@@ -1,0 +1,45 @@
+###GET ALL USERS
+POST http://localhost:8080/rest/search
+Content-Type: application/json
+
+{
+  "resultType": "USER"
+}
+
+###GET ALL USERS with 'a'
+POST http://localhost:8080/rest/search
+Content-Type: application/json
+
+{
+  "resultType": "USER",
+  "filters": [
+    {
+      "fieldName": "firstName",
+      "operation": "LIKE",
+      "fieldJunction": "OR",
+      "filterValue": "a"
+    },
+    {
+      "fieldName": "lastName",
+      "operation": "LIKE",
+      "fieldJunction": "OR",
+      "filterValue": "a"
+    }
+  ]
+}
+
+
+###GET ALL USERS younger than 30
+POST http://localhost:8080/rest/search
+Content-Type: application/json
+
+{
+  "resultType": "USER",
+  "filters": [
+    {
+      "fieldName": "age",
+      "operation": "LESS",
+      "filterValue": "30"
+    }
+  ]
+}

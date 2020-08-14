@@ -18,11 +18,12 @@ public class User {
     private String firstName;
     @Column(name = "LASTNAME")
     private String lastName;
+    @Column(name = "AGE")
+    private Integer age;
     @ElementCollection(targetClass = Role.class)
-    @CollectionTable(name = "REL_USER_ROLE",
-            joinColumns = @JoinColumn(name = "USER_REL_ID"))
+    @CollectionTable(name = "USER_ROLE",
+            joinColumns = @JoinColumn(name = "USER_ID"))
     @Column(name = "ROLE")
     @Enumerated(value = EnumType.STRING)
     private Set<Role> role;
-
 }

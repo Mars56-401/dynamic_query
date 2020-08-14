@@ -1,14 +1,14 @@
 INSERT INTO USER
-(ID, FIRSTNAME, LASTNAME)
+(ID, FIRSTNAME, LASTNAME, AGE)
 VALUES
-(1, 'Stewart', 'Barry'),
-(2, 'Morris', 'Bobby'),
-(3, 'Sandra', 'Parker'),
-(4, 'Stephie', 'Woods'),
-(5, 'Ryana', 'Hunter');
+(1, 'Stewart', 'Barry', 32),
+(2, 'Morris', 'Bobby', 26),
+(3, 'Sandra', 'Parker', 29),
+(4, 'Stephie', 'Woods', 42),
+(5, 'Ryana', 'Hunter', 33);
 
-INSERT INTO REL_USER_ROLE
-(USER_REL_ID, ROLE)
+INSERT INTO USER_ROLE
+(USER_ID, ROLE)
 VALUES
 (1, 'LEADER'),
 (1, 'PRODUCT_OWNER'),
